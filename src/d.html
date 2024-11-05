@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Happy Diwali Lamp</title>
+    <style>
+      @import url(https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300);
+      body {
+        background-color: rgb(133, 201, 23);
+      }
+
+      .lamp {
+        position: relative;
+        top: 170px;
+        margin: 0 auto;
+        height: 100px;
+        width: 100px; /* Changed width to a valid positive value */
+        background-color: rgb(214, 23, 92);
+        border-radius: 0px 10px 100% 0px;
+        border-bottom: 3px solid rgb(144, 17, 58);
+        box-shadow: inset 0 -50px 50px -20px rgb(144, 17, 58);
+      }
+
+      .lamp:before {
+        content: "";
+        display: block;
+        height: 100px;
+        width: 100px;
+        margin-left: -100px;
+        background-color: rgb(214, 23, 92);
+        border-radius: 10px 0px 0px 100%;
+        box-shadow: inset 0 -50px 50px -20px rgb(144, 17, 58);
+        border-bottom: 3px solid rgb(144, 17, 58);
+      }
+
+      .lamp:after {
+        position: absolute;
+        top: 140px;
+        left: -85px;
+        width: 200px;
+        content: "Happy Diwali!";
+        font: 30px "Open Sans Condensed", sans-serif;
+        color: black;
+        word-spacing: 3px;
+        letter-spacing: 3px;
+      }
+
+      .flame {
+        position: absolute;
+        top: -65px;
+        left: -30px;
+        width: 60px;
+        height: 60px;
+        background: OrangeRed;
+        border-radius: 0 110px 20px 110px;
+        transform: rotate(45deg);
+      }
+
+      .flame:after {
+        content: "";
+        display: block;
+        width: 60px;
+        height: 60px;
+        background: OrangeRed;
+        border-radius: 0 110px 20px 110px;
+        transform: rotate(0deg);
+        animation: flame_glare 1.5s linear infinite;
+      }
+
+      @keyframes flame_glare {
+        0% {
+          transform: scale(1);
+        }
+        50% {
+          transform: scale(1.1);
+        }
+        100% {
+          transform: scale(1);
+        }
+      }
+
+      .top {
+        position: absolute;
+        top: -40px;
+        left: -100px;
+        height: 90px;
+        width: 180px;
+        background-color: brown;
+        border-radius: 100%;
+        border-left: 10px solid rgb(144, 17, 58);
+        border-right: 10px solid rgb(144, 17, 58);
+        transform: rotateX(-60deg);
+        background: radial-gradient(
+          OrangeRed,
+          rgb(214, 23, 92) 40%,
+          rgb(144, 17, 58)
+        );
+      }
+    </style>
+  </head>
+  <body>
+    <div class="lamp">
+      <div class="top"></div>
+      <div class="flame"></div>
+    </div>
+  </body>
+</html>
