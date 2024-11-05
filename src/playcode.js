@@ -1,8 +1,8 @@
 // // find total days in js
-// const fromDate = new Date("02-10-2024");
-// const toDate = new Date("10-11-2024");
+// let  fromDate = new Date("02-10-2024");
+// let  toDate = new Date("10-11-2024");
 
-// const totalDays = (toDate - fromDate) / (3600 * 24 * 1000) + 1;
+// let  totalDays = (toDate - fromDate) / (3600 * 24 * 1000) + 1;
 
 // // console.log(totalDays);
 // // console.log(1 / "0");
@@ -11,10 +11,10 @@
 // function add() {
 //   return this.name;
 // }
-// const dd = {
+// let  dd = {
 //   name: "asdsa",
 // };
-// const b = add.bind(dd);
+// let  b = add.bind(dd);
 // console.log(add.call(dd));
 // console.log(add.apply(dd));
 
@@ -62,3 +62,16 @@ a1.forEach((d) => {
   }
 });
 console.log(count);
+let a = {
+  id: 1,
+};
+let b = JSON.parse(JSON.stringify(a));
+b.id = 2;
+console.log(a);
+console.log(b);
+
+{
+  var aa = (bb = 1);
+}
+
+console.log(bb);
